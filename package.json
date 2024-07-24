@@ -12,6 +12,7 @@
     "@ant-design-vue/nuxt": "^1.4.1",
     "@bootstrap-vue-next/nuxt": "^0.16.6",
     "@nuxt/devtools": "latest",
+    "@sidebase/nuxt-auth": "^0.8.1",
     "@types/node": "^18.17.0",
     "nuxt": "^3.6.5"
   },
