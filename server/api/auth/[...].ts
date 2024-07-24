@@ -1,6 +1,8 @@
 import GithubProvider from 'next-auth/providers/github'
 import googleProvider from 'next-auth/providers/google'
 import facebookProvider from 'next-auth/providers/facebook'
+import twitterProvider from 'next-auth/providers/twitter'
+// import youtubeProvider from 'next-auth/providers/youtube'
 import { NuxtAuthHandler } from '#auth'
 
 export default NuxtAuthHandler({
@@ -17,6 +19,10 @@ export default NuxtAuthHandler({
         clientSecret: '442233'
       }),
       facebookProvider.default({
+        clientId: 'your-client-id',
+        clientSecret: 'your-client-secret'
+      }),
+      twitterProvider.default({
         clientId: 'your-client-id',
         clientSecret: 'your-client-secret'
       })
