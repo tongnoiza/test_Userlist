@@ -4,13 +4,13 @@ export default defineNuxtConfig({
   modules: ['@ant-design-vue/nuxt', "@sidebase/nuxt-auth"],
   auth: {
     // isEnabled: true,
-        // disableServerSideAuth: false,
+        disableServerSideAuth: false,
         // baseURL: 'http://localhost:3000/api/auth',
     baseURL:'',
     provider: {
         type: 'authjs',
-        trustHost: false,
-        defaultProvider: 'github',
+        trustHost: true,
+        // defaultProvider: 'github',
         addDefaultCallbackUrl: true
     }
     ,  globalAppMiddleware: true
