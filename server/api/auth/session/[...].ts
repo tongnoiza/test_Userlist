@@ -19,9 +19,10 @@ export default NuxtAuthHandler({
     jwt({ token, account, profile }) {
       console.log('token ',token);
       console.log('account ',account); 
-      console.log('profile ',profile);
+      console.log('profile ',profile); 
         if (account) {
             token.sessionToken = account.session_token
+            console.log('token.sessionToken',token.sessionToken);
         }
         return token
     },
