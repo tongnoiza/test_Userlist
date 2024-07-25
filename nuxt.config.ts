@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   // ssr:true,
   modules: ['@ant-design-vue/nuxt', "@sidebase/nuxt-auth"],
   auth: {
-    baseURL:'https://user-list-xts0.onrender.com',
+    baseURL:'https://user-list-xts0.onrender.com/api/auth',
     provider: {
         type: 'authjs',
         trustHost: false,
