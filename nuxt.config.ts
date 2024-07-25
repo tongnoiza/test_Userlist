@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     // isEnabled: true,
         disableServerSideAuth: false,
         // baseURL: 'http://localhost:3000/api/auth',
-    baseURL:'https://user-list-xts0.onrender.com',
+    // baseURL:'https://user-list-xts0.onrender.com',
     provider: {
         type: 'authjs',
         trustHost: true,
