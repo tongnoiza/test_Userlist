@@ -7,8 +7,8 @@ export default defineNuxtConfig({
     provider: {
         type: 'authjs',
         trustHost: false,
-        defaultProvider: 'github',
-        addDefaultCallbackUrl: true
+        // defaultProvider: 'github',
+        // addDefaultCallbackUrl: true
 
     }
     ,  globalAppMiddleware: true
