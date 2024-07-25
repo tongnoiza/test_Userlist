@@ -9,7 +9,6 @@ export default defineNuxtConfig({
         trustHost: false,
         // defaultProvider: 'github',
         addDefaultCallbackUrl: true
-
     }
     ,  globalAppMiddleware: true
 },
