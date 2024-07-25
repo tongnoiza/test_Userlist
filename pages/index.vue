@@ -1,12 +1,7 @@
 <template>
   <div>
 <!-- {{ o}} -->
-  {{  status}}
-  {{  data,
-    lastRefreshedAt,
-    getCsrfToken,
-    getProviders}}
-    getSession {{  getSession }}
+ 
     <a-button class="editable-add-btn" style="margin-bottom: 8px" @click="signIn('github')">signIn</a-button>
     <a-button class="editable-add-btn" style="margin-bottom: 8px" @click="signIn('google')">signIn google</a-button>
     <a-page-header style="border: 1px solid rgb(235, 237, 240)" title="CRUD Basic" />
