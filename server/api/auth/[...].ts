@@ -11,20 +11,8 @@ export default NuxtAuthHandler({
   providers: [
     // @ts-expect-error Use .default here for it to work during SSR.
     GithubProvider.default({
-      clientId: 'ss123',
-      clientSecret: 'ss123'
-    }),
-    googleProvider.default({
-        clientId: '442233',
-        clientSecret: '442233'
-      }),
-      facebookProvider.default({
-        clientId: 'your-client-id',
-        clientSecret: 'your-client-secret'
-      }),
-      twitterProvider.default({
-        clientId: 'your-client-id',
-        clientSecret: 'your-client-secret'
-      })
+      clientId: 'Ov23liNSHuXCEoO5yhkm',
+      clientSecret: 'a383ec729af653e582c730ec73ce8c84c0e28232'
+    })
   ]
 })
