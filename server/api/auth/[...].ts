@@ -7,7 +7,7 @@ import { NuxtAuthHandler } from '#auth'
 
 export default NuxtAuthHandler({
   // A secret string you define, to ensure correct encryption
-  secret: useRuntimeConfig().authSecret,
+  // secret: useRuntimeConfig().authSecret,
   // origin:process.env.NEXTAUTH_URL,
   providers: [
     // @ts-expect-error Use .default here for it to work during SSR.
@@ -29,22 +29,6 @@ export default NuxtAuthHandler({
         // userdata ={token,account,profile}
         return token
     },
-    // async session({ session, token }):Promise<any> {
-    //       // Token we injected into the JWT callback above.
-    //       const tok = token.sessionToken
-    
-    //       // Fetch data OR add previous data from the JWT callback.
-    //       const additionalUserData:User = await $fetch(`/api/session/${tok}`)
-    
-    //       // Return the modified session
-    //       return {
-    //         ...session,
-    //         user: {
-    //           name: additionalUserData.name,
-    //           avatar: additionalUserData.avatar,
-    //           role: additionalUserData.role
-    //         }
-    //       }
-    //     },
+
   }
 })

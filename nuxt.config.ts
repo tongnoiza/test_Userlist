@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
-  // ssr:false,
+  ssr:false,
   // pages: true,
   build: {
     transpile: ['vuetify'],
@@ -24,24 +24,22 @@ export default defineNuxtConfig({
   },
   // modules: [ '@ant-design-vue/nuxt'],
   auth: {
-    // origin: 'https://your-cool-origin.com',
     // isEnabled: true,
         // disableServerSideAuth: true,
-        // baseURL: 'https://github.com/login/oauth/authorize',
+        // baseURL: 'http://localhost:3002',
     // baseURL:'https://user-list-xts0.onrender.com',
     provider: {
         type: 'authjs',
-        // trustHost: false,
+        trustHost: false,
         // defaultProvider: 'github',
         // addDefaultCallbackUrl: true
     }
-    // ,  globalAppMiddleware: true
+    ,  globalAppMiddleware: true
 },
 runtimeConfig: {
   public: {
     baseURL: 'http://localhost:3002',
   },
-  authOrigin: process.env.NEXTAUTH_URL,
   authSecret: '123',
 },
   devtools: { enabled: true },
