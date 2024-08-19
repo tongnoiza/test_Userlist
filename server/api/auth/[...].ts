@@ -15,7 +15,7 @@ export default NuxtAuthHandler({
       clientId: 'Ov23liNSHuXCEoO5yhkm',
       clientSecret: 'a383ec729af653e582c730ec73ce8c84c0e28232'
     })
-  ], 
+  ],
   callbacks: {  
     jwt({ token, account, profile }) {
       // console.log('token ',token);
