@@ -16,9 +16,7 @@
                       <h2>{{ PostDetail.PostHeader }}</h2>
                     </div><br>
                     <!-- <div> <h3>{{ PostDetail?.PostHeader }}</h3></div> -->
-
                   </v-row>
-
                   <!-- โพสต์วันที่   -->
                 </v-expansion-panel-title>   <v-textarea
                   label="Label"
