@@ -18,15 +18,9 @@ export default NuxtAuthHandler({
   ],
   callbacks: {  
     jwt({ token, account, profile }) {
-      // console.log('token ',token);
-      // console.log('account ',account); 
-      // console.log('profile ',profile); 
         if (account) {
           token.sessionToken = account.access_token
-            // token.sessionToken = account.session_token
-            // console.log('t,oken.sessionToken',token.sessionToken);
         }
-        // userdata ={token,account,profile}
         return token
     },
 

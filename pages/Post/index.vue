@@ -56,7 +56,7 @@
   </div>
 </template>
 <script setup >
-const { data } = useAuth()
+const { data,getProviders } = useAuth()
 let router = useRouter();
 let rd = []
 const PostList = []
@@ -69,7 +69,7 @@ const state = {
   loading: false,
 }
 const ff = []
-const form = {}
+const form = reactive({})
 const columns = [
   {
     name: "Name",

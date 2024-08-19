@@ -2,12 +2,9 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
   ssr:false,
-
-  // pages: true,
   build: {
     transpile: ['vuetify'],
   },
-
   modules: ["@sidebase/nuxt-auth", 
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -17,7 +14,6 @@ export default defineNuxtConfig({
     },
     //...
   ],
-
   vite: {
     vue: {
       template: {
@@ -25,8 +21,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  // modules: [ '@ant-design-vue/nuxt'],
   auth: {
     // isEnabled: true,
         // disableServerSideAuth: true,
