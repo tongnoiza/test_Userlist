@@ -8,8 +8,8 @@
           
             <v-app-bar-title>Application Bar</v-app-bar-title>
           </v-app-bar>   </div>
-         <div>
-              <slot style="margin-top: 15%;"/>
+         <div style="padding-top: 5%;">
+              <slot/>
          </div>
           
         
