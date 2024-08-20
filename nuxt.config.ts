@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     // isEnabled: true,
         // disableServerSideAuth: true,
         // baseURL: 'http://localhost:3002',
-    // baseURL:'https://user-list-xts0.onrender.com',
+    baseURL:'test-userlist.vercel.app',
     provider: {
         type: 'authjs',
         trustHost: false,
