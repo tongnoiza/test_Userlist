@@ -1,5 +1,17 @@
 <template>
   <div>
+    <!-- <v-btn @click="tog = !tog">click</v-btn>
+    {{ tog }}
+    <v-skeleton-loader :loading="tog" class="mx-auto border" max-width="300"
+    type="card-avatar, actions">
+    <v-responsive>
+      <v-img
+        src="https://9to5mac.com/wp-content/uploads/sites/6/2020/06/pip-iphone-controls.jpg?quality=82&strip=all"
+        class="rounded-lg mb-2"
+        height="auto"
+      ></v-img>
+    </v-responsive>
+  </v-skeleton-loader> -->
     <v-btn @click="useRouter().back()">
       goto back
     </v-btn>
@@ -22,17 +34,11 @@
               <v-text-field label="Toptic" v-model="form.PostHeader" variant="outlined"></v-text-field>
               <v-textarea v-model="form.PostMsg" label="Message" :counter="300" class="mb-2" rows="2" variant="outlined"
                 persistent-counter>
-
               </v-textarea>
-
-
             </v-card-text>
-
             <v-divider class="mt-2"></v-divider>
-
             <v-card-actions class="my-2 d-flex justify-end">
               <v-btn class="text-none" rounded="xl" text="Cancel" @click="isActive.value = false"></v-btn>
-
               <v-btn class="text-none" color="primary" rounded="xl" text="Send" variant="flat"
                 @click="CreatePost(); isActive.value = false"></v-btn>
             </v-card-actions>
@@ -45,12 +51,45 @@
         <v-col>
         </v-col>
         <v-col cols="12" md="8" sm="4">
-          <v-card text="PostList"> <v-list lines="two">
+          <v-card > 
+            <!-- <v-list lines="two">
               <v-list-item v-for="n in rd" :key="n" :title="n.PostHeader" :subtitle="n.PostMsg"
-                :prepend-avatar="data.user.image" @click="seedata(n)"></v-list-item>
-            </v-list></v-card>
+                :prepend-avatar="data.user.image" @click="seedata(n)">iugiug</v-list-item>
+            </v-list> -->
+
+            <v-table>
+              <thead>
+                <tr>
+                  <th class="text-left">
+                    PostHeader
+                  </th>
+                  <th class="text-left">
+                    createdAt
+                  </th>
+                  <th class="text-left">
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="item in rd"
+                  :key="item.id"
+                  @dblclick="seedata(item )"
+                >
+                  <td>
+                    <v-row>ผู้โพสต์ {{item.Username}}</v-row>
+                    <v-row>{{ item.PostHeader }}</v-row>
+                    
+                  </td>
+                  <td>{{ item.createdAt }}</td>
+                  <td> </td>
+                </tr>
+              </tbody>
+            </v-table>
+          </v-card>
         </v-col>
-        <v-col></v-col>
+        <v-col>dsdf</v-col>
       </v-row>
     </v-container>
   </div>
@@ -68,8 +107,9 @@ const state = {
   selectedRowKeys: [],
   loading: false,
 }
+let tog = ref(false)
 const ff = []
-const form = reactive({})
+let form = reactive({})
 const columns = [
   {
     name: "Name",
@@ -95,12 +135,15 @@ const columns = [
 await search()
 async function CreatePost() {
   console.log('getProviders ', await getProviders());
-  console.log('ลอง ', JSON.parse(JSON.stringify(data)));
+  console.log('ลอง ', JSON.parse(JSON.stringify(data))._object['$sauth:data'].user );
+ const {name } =  JSON.parse(JSON.stringify(data))._object['$sauth:data'].user
   await useFetch('http://localhost:3002/post/topic', {
-    body: { Username: data.user.name, ...form },
+    body: { Username: name , ...form },
     method: 'post'
-  })
+  }) 
+  form = await reactive({})
   await search()
+ 
   // isActive.value = false
 }
 async function search() {

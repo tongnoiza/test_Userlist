@@ -1,9 +1,9 @@
 <template>
 <div>
       <!-- <v-app>  -->
-        <!-- <NuxtLayout>  -->
+        <NuxtLayout> 
         <NuxtPage :page-key="route => route.fullPath"/>
-      <!-- </NuxtLayout>  -->
+      </NuxtLayout> 
     <!-- </v-app>  -->
   </div>  
 </template>
