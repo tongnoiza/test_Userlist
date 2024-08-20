@@ -4,6 +4,7 @@
             <div>     <v-app-bar :elevation="2" rounded>
             <template v-slot:prepend>
               <v-app-bar-nav-icon></v-app-bar-nav-icon>
+              <v-btn @click="signOut">sing out</v-btn>
             </template>
           
             <v-app-bar-title>Application Bar</v-app-bar-title>
@@ -17,3 +18,7 @@
    
     </div>
 </template>
+
+<script setup>
+const {signOut} = useAuth()
+</script>
