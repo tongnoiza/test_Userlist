@@ -36,9 +36,9 @@ export default defineNuxtConfig({
 },
 
   runtimeConfig: {
-    // public: {
-    //   baseURL: 'http://localhost:3002',
-    // },
+    public: {
+      baseURL: 'https://dashboard.render.com'||'http://localhost:3002',
+    },
     authSecret: '123',
   },
 
