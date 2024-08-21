@@ -25,7 +25,6 @@ export default defineNuxtConfig({
     isEnabled: true,
         disableServerSideAuth: true,
         baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined,
-    // baseURL:'https://user-list-xts0.onrender.com',
     provider: {
         type: 'authjs',
         trustHost: true,
@@ -37,7 +36,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      baseURL: 'https://dashboard.render.com'||'http://localhost:3002',
+      baseURL:'http://localhost:3002',
     },
     authSecret: '123',
   },
