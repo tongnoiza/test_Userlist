@@ -22,15 +22,15 @@ export default defineNuxtConfig({
     },
   },
   auth: {
-    // isEnabled: true,
-        // disableServerSideAuth: true,
-        // baseURL: 'http://localhost:3002',
+    isEnabled: true,
+        disableServerSideAuth: true,
+        baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined,
     // baseURL:'https://user-list-xts0.onrender.com',
     provider: {
         type: 'authjs',
-        trustHost: false,
-        // defaultProvider: 'github',
-        // addDefaultCallbackUrl: true
+        trustHost: true,
+        defaultProvider: 'github',
+        addDefaultCallbackUrl: true
     }
     ,  globalAppMiddleware: true
 },

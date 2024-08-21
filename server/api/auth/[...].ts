@@ -14,7 +14,11 @@ export default NuxtAuthHandler({
     GithubProvider.default({
       clientId: 'Ov23liNSHuXCEoO5yhkm',
       clientSecret: 'a383ec729af653e582c730ec73ce8c84c0e28232'
-    })
+    }),
+    googleProvider.default({
+      clientId: '639509295188-5rc3hdeo7b5hojatgtvnr6v62mn6pafg.apps.googleusercontent.com',
+      clientSecret:'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'
+    }),
   ],
   callbacks: {  
     jwt({ token, account, profile }) {
@@ -23,6 +27,5 @@ export default NuxtAuthHandler({
         }
         return token
     },
-
   }
 })
