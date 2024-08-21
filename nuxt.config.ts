@@ -12,7 +12,6 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-    //...
   ],
   vite: {
     vue: {
@@ -30,10 +29,8 @@ export default defineNuxtConfig({
         trustHost: true,
         defaultProvider: 'github',
         addDefaultCallbackUrl: true
-    }
-    ,  globalAppMiddleware: true
+    },globalAppMiddleware: true
 },
-
   runtimeConfig: {
     public: {
       baseURL:'http://localhost:3002',
