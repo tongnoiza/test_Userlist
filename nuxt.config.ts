@@ -23,11 +23,10 @@ export default defineNuxtConfig({
   auth: {
     isEnabled: true,
         disableServerSideAuth: true,
-        baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined,
     provider: {
         type: 'authjs',
         trustHost: true,
-        defaultProvider: 'github',
+        // defaultProvider: 'github',
         addDefaultCallbackUrl: true
     },globalAppMiddleware: true
 },
