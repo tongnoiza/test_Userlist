@@ -22,12 +22,12 @@ export default defineNuxtConfig({
   },
   auth: {
     // isEnabled: true,
-    // disableServerSideAuth: false,
+    disableServerSideAuth: false,
     originEnvKey: 'AUTH_ORIGIN',
     // baseURL: '/api/auth',
     provider: {
       type: 'authjs',
-      // trustHost: true,
+      trustHost: true,
       // defaultProvider: 'github',
       // addDefaultCallbackUrl: true
     },
