@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+const VERCEL_URL='test-userlist-qu37zbtge-tongnoizas-projects.vercel.app'
 export default defineNuxtConfig({
   // ssr: true,
   build: {
