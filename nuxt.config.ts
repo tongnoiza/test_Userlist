@@ -24,12 +24,14 @@ export default defineNuxtConfig({
     // isEnabled: true,
     disableServerSideAuth: false,
     originEnvKey: 'AUTH_ORIGIN',
-    // baseURL: '/api/auth',
+    // sessionRefresh:true,
+    baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined,
     provider: {
       type: 'authjs',
-      trustHost: true,
+      trustHost: false,
       // defaultProvider: 'github',
       // addDefaultCallbackUrl: true
+
     },
      globalAppMiddleware: true
   },
