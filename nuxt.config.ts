@@ -22,13 +22,13 @@ export default defineNuxtConfig({
   },
   auth: {
     provider: {
-      trustHost:true,
+      // trustHost:true,
       type: 'authjs',
     },
-  globalAppMiddleware: {
-    isEnabled: true
-  },
-    baseURL: `http://test-userlist.vercel.app/api/auth`
+  globalAppMiddleware:  true,
+    // baseURL: `http://test-userlist.vercel.app/api/auth`
+    baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined
+
   },
   runtimeConfig: {
     public: {
@@ -36,14 +36,14 @@ export default defineNuxtConfig({
     },
     authSecret: '123',
   },
-  routeRules: {
-    '/with-caching': {
-      swr: 86400000,
-      // auth: {
-      //   disableServerSideAuth: true
-      // }
-    }
-  },
+  // routeRules: {
+  //   '/with-caching': {
+  //     swr: 86400000,
+  //     // auth: {
+  //     //   disableServerSideAuth: true
+  //     // }
+  //   }
+  // },
   devtools: { enabled: true },
   compatibilityDate: '2024-08-19',
 })
