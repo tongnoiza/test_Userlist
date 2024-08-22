@@ -22,12 +22,13 @@ export default defineNuxtConfig({
   },
   auth: {
     provider: {
+      trustHost:true,
       type: 'authjs',
     },
   globalAppMiddleware: {
     isEnabled: true
   },
-    baseURL: `http://test-userlist.vercel.app`
+    baseURL: `http://test-userlist.vercel.app/api/auth`
   },
   runtimeConfig: {
     public: {
