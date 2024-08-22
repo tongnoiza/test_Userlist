@@ -21,25 +21,27 @@ export default defineNuxtConfig({
     },
   },
   auth: {
-    // isEnabled: true,
-    disableServerSideAuth: false,
-    originEnvKey: 'AUTH_ORIGIN',
-    // sessionRefresh:true,
-    baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined,
     provider: {
       type: 'authjs',
-      trustHost: false,
-      // defaultProvider: 'github',
-      // addDefaultCallbackUrl: true
-
     },
-     globalAppMiddleware: true
+  globalAppMiddleware: {
+    isEnabled: true
+  },
+    baseURL: `http://localhost:${process.env.PORT || 3000}`
   },
   runtimeConfig: {
     public: {
       baseURL: 'http://localhost:3002',
     },
     authSecret: '123',
+  },
+  routeRules: {
+    '/with-caching': {
+      swr: 86400000,
+      auth: {
+        disableServerSideAuth: true
+      }
+    }
   },
   devtools: { enabled: true },
   compatibilityDate: '2024-08-19',
