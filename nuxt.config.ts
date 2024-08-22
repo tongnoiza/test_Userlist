@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     baseURL: '/api/auth',
     provider: {
       type: 'authjs',
-      // trustHost: true,
+      trustHost: true,
       // defaultProvider: 'github',
       // addDefaultCallbackUrl: true
     },
