@@ -4,10 +4,14 @@ import facebookProvider from 'next-auth/providers/facebook'
 import twitterProvider from 'next-auth/providers/twitter'
 // import youtubeProvider from 'next-auth/providers/youtube'
 import { NuxtAuthHandler } from '#auth'
-
+interface data {
+  name:String,
+  avatar:String,
+  role:String
+}
 export default NuxtAuthHandler({
   // A secret string you define, to ensure correct encryption
-  // secret: useRuntimeConfig().authSecret,
+  secret: useRuntimeConfig().authSecret,
   // origin:process.env.NEXTAUTH_URL,
   providers: [
     // @ts-expect-error Use .default here for it to work during SSR.
@@ -17,6 +21,7 @@ export default NuxtAuthHandler({
     }),
   ],
   callbacks: {  
+ 
     jwt({ token, account, profile }) {
         if (account) {
           token.sessionToken = account.access_token

@@ -7,12 +7,8 @@
 </div>
 </template>
 <script setup>
-
 const r = useRouter()
-
 function gotopost(){
     r.push({path:'/Post'})
 }
-
-
 </script>
