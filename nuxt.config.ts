@@ -39,9 +39,9 @@ export default defineNuxtConfig({
   routeRules: {
     '/with-caching': {
       swr: 86400000,
-      auth: {
-        disableServerSideAuth: true
-      }
+      // auth: {
+      //   disableServerSideAuth: true
+      // }
     }
   },
   devtools: { enabled: true },
