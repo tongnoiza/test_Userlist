@@ -27,7 +27,7 @@ export default defineNuxtConfig({
   globalAppMiddleware: {
     isEnabled: true
   },
-    baseURL: `http://test-userlist.vercel.app:${process.env.PORT || 3000}`
+    baseURL: `http://test-userlist.vercel.app`
   },
   runtimeConfig: {
     public: {
