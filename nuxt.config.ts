@@ -24,7 +24,7 @@ export default defineNuxtConfig({
     // isEnabled: true,
     // disableServerSideAuth: false,
     originEnvKey: 'AUTH_ORIGIN',
-    // baseURL: 'http://localhost:3000/api/auth',
+    baseURL: '/api/auth',
     provider: {
       type: 'authjs',
       // trustHost: true,
