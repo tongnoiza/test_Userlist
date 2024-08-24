@@ -23,11 +23,13 @@ export default defineNuxtConfig({
   },
   auth: {
     provider: {
-      trustHost:true,
       type: 'authjs',
+      trustHost: false,
+      defaultProvider: 'github',
+      addDefaultCallbackUrl: true
     },
   globalAppMiddleware:  true,
-    baseURL: `https://test-userlist-qu37zbtge-tongnoizas-projects.vercel.app`
+  baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined
   },
   runtimeConfig: {
     public: {
