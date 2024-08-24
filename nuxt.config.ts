@@ -27,9 +27,7 @@ export default defineNuxtConfig({
       type: 'authjs',
     },
   globalAppMiddleware:  true,
-    // baseURL: `http://test-userlist.vercel.app/api/auth`
-    // baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : '/api/auth'
-
+    baseURL: `https://test-userlist-qu37zbtge-tongnoizas-projects.vercel.app/api/auth`
   },
   runtimeConfig: {
     public: {
