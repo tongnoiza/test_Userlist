@@ -2,7 +2,7 @@
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 const VERCEL_URL='test-userlist-qu37zbtge-tongnoizas-projects.vercel.app'
 export default defineNuxtConfig({
-  // ssr: true,
+  ssr: true,
   build: {
     transpile: ['vuetify'],
   },
@@ -29,13 +29,13 @@ export default defineNuxtConfig({
       addDefaultCallbackUrl: true
     },
   globalAppMiddleware:  true,
-  baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined
+  baseURL:undefined
   },
   runtimeConfig: {
     public: {
       baseURL: 'http://localhost:3002',
     },
-    authSecret: '123',
+    authSecret: 'testzaaaaa',
   },
   // routeRules: {
   //   '/with-caching': {

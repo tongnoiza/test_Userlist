@@ -4,11 +4,6 @@ import facebookProvider from 'next-auth/providers/facebook'
 import twitterProvider from 'next-auth/providers/twitter'
 // import youtubeProvider from 'next-auth/providers/youtube'
 import { NuxtAuthHandler } from '#auth'
-interface data {
-  name:String,
-  avatar:String,
-  role:String
-}
 export default NuxtAuthHandler({
   // A secret string you define, to ensure correct encryption
   secret: useRuntimeConfig().authSecret,
@@ -21,7 +16,6 @@ export default NuxtAuthHandler({
     }),
   ],
   callbacks: {  
- 
     jwt({ token, account, profile }) {
         if (account) {
           token.sessionToken = account.access_token
