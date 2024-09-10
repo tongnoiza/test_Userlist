@@ -24,12 +24,12 @@ export default defineNuxtConfig({
   auth: {
     provider: {
       type: 'authjs',
-      trustHost: false,
-      defaultProvider: 'github',
-      addDefaultCallbackUrl: true
+      // trustHost: false,
+      // defaultProvider: 'github',
+      // addDefaultCallbackUrl: true
     },
   globalAppMiddleware:  true,
-  baseURL:undefined
+  baseURL: process.env.NUXT_AUTH_ORIGIN
   },
   runtimeConfig: {
     public: {
