@@ -22,31 +22,30 @@ export default defineNuxtConfig({
   //   },
   // },
   auth: {
-    // provider: {
-    //   type: 'authjs',
-    //   // trustHost: false,
-    //   // defaultProvider: 'github',
-    //   // addDefaultCallbackUrl: true
-    // },
+    provider: {
+      type: 'authjs',
+      trustHost: false,
+      // defaultProvider: 'github',
+      // addDefaultCallbackUrl: true
+    },
   globalAppMiddleware:  true,
-  // baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined
+  baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined
   },
   runtimeConfig: {
-    public: { 
-    
-      // baseURL: 'http://localhost:3002',
-    },
+    // public: { 
+    //   // baseURL: 'http://localhost:3002',
+    // },
         authOrigin: 'https://test-userlist-nmk7qoms8-tongnoizas-projects.vercel.app',
     authSecret: 'testzaaaaa',
   },
-  routeRules: {
-    '/with-caching': {
-      swr: 86400000,
-      auth: {
-        disableServerSideAuth: true
-      }
-    }
-  },
-  devtools: { enabled: true },
+  // routeRules: {
+  //   '/with-caching': {
+  //     swr: 86400000,
+  //     auth: {
+  //       disableServerSideAuth: true
+  //     }
+  //   }
+  // },
+  // devtools: { enabled: true },
   compatibilityDate: '2024-08-19',
 })
