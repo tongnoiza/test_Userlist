@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     // public: {
     //   baseURL: 'http://localhost:3002',
     // },
+       authOrigin: 'https://test-userlist-nmk7qoms8-tongnoizas-projects.vercel.app',
     authSecret: 'testzaaaaa',
   },
   // routeRules: {
