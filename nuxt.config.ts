@@ -22,14 +22,14 @@ export default defineNuxtConfig({
   //   },
   // },
   auth: {
-    provider: {
-      type: 'authjs',
-      // trustHost: false,
-      // defaultProvider: 'github',
-      // addDefaultCallbackUrl: true
-    },
-  // globalAppMiddleware:  true,
-  // baseURL: process.env.NUXT_AUTH_ORIGIN
+    // provider: {
+    //   type: 'authjs',
+    //   // trustHost: false,
+    //   // defaultProvider: 'github',
+    //   // addDefaultCallbackUrl: true
+    // },
+  globalAppMiddleware:  true,
+  baseURL: process.env.VERCEL_URL ? `https://${VERCEL_URL}/api/auth` : undefined
   },
   runtimeConfig: {
     // public: {
