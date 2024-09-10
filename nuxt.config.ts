@@ -28,13 +28,13 @@ export default defineNuxtConfig({
       // defaultProvider: 'github',
       // addDefaultCallbackUrl: true
     },
-  globalAppMiddleware:  true,
+  // globalAppMiddleware:  true,
   baseURL: process.env.NUXT_AUTH_ORIGIN
   },
   runtimeConfig: {
-    public: {
-      baseURL: 'http://localhost:3002',
-    },
+    // public: {
+    //   baseURL: 'http://localhost:3002',
+    // },
     authSecret: 'testzaaaaa',
   },
   // routeRules: {
