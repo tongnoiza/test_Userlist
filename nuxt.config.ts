@@ -14,13 +14,13 @@ export default defineNuxtConfig({
       })
     },
   ],
-  vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
-      },
-    },
-  },
+  // vite: {
+  //   vue: {
+  //     template: {
+  //       transformAssetUrls,
+  //     },
+  //   },
+  // },
   auth: {
     provider: {
       type: 'authjs',
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
       // addDefaultCallbackUrl: true
     },
   // globalAppMiddleware:  true,
-  baseURL: process.env.NUXT_AUTH_ORIGIN
+  // baseURL: process.env.NUXT_AUTH_ORIGIN
   },
   runtimeConfig: {
     // public: {
